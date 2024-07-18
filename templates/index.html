@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Produksi Padi</title>
+</head>
+<body>
+    <h1>Prediksi Produksi Padi</h1>
+    <form action="/predict" method="post">
+        <label for="tahun">Tahun:</label><br>
+        <input type="text" id="tahun" name="tahun"><br>
+        <label for="luas_panen">Luas Panen:</label><br>
+        <input type="text" id="luas_panen" name="luas_panen"><br>
+        <label for="curah_hujan">Curah Hujan:</label><br>
+        <input type="text" id="curah_hujan" name="curah_hujan"><br>
+        <label for="kelembapan">Kelembapan:</label><br>
+        <input type="text" id="kelembapan" name="kelembapan"><br>
+        <label for="suhu_rata_rata">Suhu Rata-Rata:</label><br>
+        <input type="text" id="suhu_rata_rata" name="suhu_rata_rata"><br>
+        <input type="submit" value="Prediksi">
+    </form>
+</body>
+</html>
