@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediksi Produksi Padi</title>
+    <title>Production Prediction</title>
 </head>
 <body>
-    <h1>Prediksi Produksi Padi</h1>
-    <form action="/predict" method="POST">
-        <label for="tahun">Tahun:</label><br>
-        <input type="text" id="tahun" name="tahun"><br>
-        <label for="luas_panen">Luas Panen:</label><br>
-        <input type="text" id="luas_panen" name="luas_panen"><br>
-        <label for="curah_hujan">Curah Hujan:</label><br>
-        <input type="text" id="curah_hujan" name="curah_hujan"><br>
-        <label for="kelembapan">Kelembapan:</label><br>
-        <input type="text" id="kelembapan" name="kelembapan"><br>
-        <label for="suhu_rata_rata">Suhu Rata-Rata:</label><br>
-        <input type="text" id="suhu_rata_rata" name="suhu_rata_rata"><br>
-        <input type="submit" value="Prediksi">
+    <h1>Predict Rice Production</h1>
+    <form action="/predict" method="post">
+        <label for="year">Year:</label><br>
+        <input type="text" id="year" name="year"><br><br>
+        <label for="luas">Luas Panen:</label><br>
+        <input type="text" id="luas" name="luas"><br><br>
+        <label for="rainfall">Curah Hujan:</label><br>
+        <input type="text" id="rainfall" name="rainfall"><br><br>
+        <label for="humidity">Kelembapan:</label><br>
+        <input type="text" id="humidity" name="humidity"><br><br>
+        <label for="temperature">Suhu Rata-rata:</label><br>
+        <input type="text" id="temperature" name="temperature"><br><br>
+        <input type="submit" value="Predict">
     </form>
+    {% if prediction_text %}
+        <h2>{{ prediction_text }}</h2>
+    {% endif %}
 </body>
 </html>
+
